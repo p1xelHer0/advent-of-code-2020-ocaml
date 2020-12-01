@@ -1,0 +1,6 @@
+(library
+ (name aoc20)
+ (public_name aoc20)
+ (libraries Str)
+ (flags
+  (:standard -open StdLabels)))

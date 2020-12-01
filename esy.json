@@ -1,0 +1,33 @@
+{
+  "name": "aoc20",
+  "version": "0.1.0",
+  "description": "Advent of Code 2020 in OCaml",
+  "license": "MIT",
+  "esy": {
+    "build": "dune build -p #{self.name}",
+    "buildDev": "dune build --root . --only-package #{self.name}",
+    "buildsInSource": "_build",
+    "buildEnv": { "ODOC_SYNTAX": "ml" }
+  },
+  "scripts": {
+    "run": "esy x #{self.name}",
+    "dev": "dune build -p #{self.name} --watch",
+    "test": "dune build @test/runtest -f",
+    "format": "dune build @fmt --auto-promote",
+    "doc": "dune build @doc",
+    "doc-path": "echo #{self.target_dir}/default/_doc/_html/index.html",
+    "utop": "dune utop lib -- -implicit-bindings"
+  },
+  "dependencies": {
+    "@opam/dune": "2.7.1",
+    "ocaml": "4.11.1000"
+  },
+  "devDependencies": {
+    "@opam/alcotest": "1.2.3",
+    "@opam/merlin": "*",
+    "@opam/ocaml-lsp-server": "ocaml/ocaml-lsp:ocaml-lsp-server.opam",
+    "@opam/ocamlformat": "0.15.0",
+    "@opam/odoc": "*",
+    "@opam/utop": "*"
+  }
+}

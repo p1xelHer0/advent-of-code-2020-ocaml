@@ -1,0 +1,7 @@
+(executable
+ (name puzzle)
+ (public_name puzzle_1)
+ (libraries aoc20)
+ (flags
+  (:standard -open StdLabels)
+  (:standard -open Aoc20)))

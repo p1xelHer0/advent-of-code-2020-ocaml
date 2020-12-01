@@ -1,0 +1,6 @@
+(executable
+ (name main)
+ (public_name aoc20)
+ (libraries aoc20)
+ (flags
+  (:standard -open Aoc20)))

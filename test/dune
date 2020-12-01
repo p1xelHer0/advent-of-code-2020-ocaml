@@ -1,0 +1,21 @@
+(library
+ (name aoc20_test)
+ (libraries alcotest aoc20)
+ (modules
+  (:standard \ test_runner))
+ (flags
+  (:standard -linkall -g -open StdLabels)))
+
+(executable
+ (name test_runner)
+ (libraries alcotest aoc20_test)
+ (modules test_runner)
+ (flags
+  (:standard -open StdLabels)))
+
+(rule
+ (alias runtest)
+ (action
+  (run ./test_runner.exe -q --color=always)))
+
+(include_subdirs unqualified)
