@@ -9,5 +9,5 @@ I use [esy](https://esy.sh/) to run the puzzles. In `./lib` you will find each p
 Puzzles are numbered `{1..25}`
 
 ```
-esy dune exec bin/day_1/puzzle.exe
+esy dune exec lib/day_1/puzzle.exe
 ```
